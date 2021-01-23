@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('pegawai','Pegawaicontroller@index');
+Route::post('pegawai','Pegawaicontroller@store');
+Route::put('pegawai/{id}','Pegawaicontroller@update');
+Route::delete('pegawai/{id}','Pegawaicontroller@delete');
