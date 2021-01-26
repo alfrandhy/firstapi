@@ -11,6 +11,11 @@ class PegawaiController extends Controller
         return Pegawai::all();
     }
 
+    public function view($id)
+    {
+        return Pegawai::find($id);
+    }
+
     public function store(Request $request){
         $this->validate($request,[
             'name' => 'required|string|unique:pegawais',
